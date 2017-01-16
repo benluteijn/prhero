@@ -67,15 +67,15 @@ function sendLove (data) {
       'Accept': 'application/vnd.github.squirrel-girl-preview'
     },
     json: {
-      content: 'heart'
+      content: '-1'
     }
   }
   request.post(options, function (error, response, body) {
     console.log(response.statusCode)
     if (!error && response.statusCode === 200) {
-      console.log('heart', 'done')
+      console.log('-1', 'done')
             starRepository(data)
-            notifyClients('heart', data)
+            notifyClients('-1', data)
     } else {
       console.error('GitHub issue', response.statusCode)
     }

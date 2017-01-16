@@ -3,7 +3,7 @@ socket.on('github', function (data) {
     console.log(data)
     let li = ''
     switch(data.action) {
-        case 'heart': {
+        case '-1': {
             li = $('<li>', {html:`<a href='${data.data.url}' target='_blank'>${data.data.url}</a>`})
             break;
         }
